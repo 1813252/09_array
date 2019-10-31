@@ -3,21 +3,34 @@
 # define SIZE 5
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-int main(int argc, char *argv[]) {
+void square_array(int a[],int size)
+{
+	int i;
+	for  (i=0;i<SIZE;i++){
+		a[i]=a[i]*a[i];
+	}
+}
+
+void print_array(int a[],int size){
 	
 	int i;
 	
-	int a[SIZE]={1,2,3,4,5};
-	int b[SIZE]={1,2,3,5,5};
-	int flag_same=1;
-	
 	for  (i=0;i<SIZE;i++){
+	
+	printf("%d",a[i]);
+}
+	printf("\n");
+	
+	}
+
+int main(int argc, char *argv[]) {
+	
+	int list[SIZE]={1,2,3,4};
+	
+	print_array(list,SIZE);
+	square_array(list,SIZE);
+	print_array(list,SIZE);
 		
-	if(a[i]!=b[i])	
-	
-	printf("%i is differen\n",i);
-	
-	}	
 	
 	return 0;
 }
